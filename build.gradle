@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.hibernate.orm:hibernate-core:6.1.4.Final'
+    implementation 'com.h2database:h2:2.1.214'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+}
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter('5.9.0')
+        }
+    }
+}
+
+application {
+    mainClass = 'com.example.App'
+}
